@@ -8,6 +8,20 @@
 import SwiftUI
 
 struct Course: Hashable, Codable {
-    let name: String
-    let image: String
+    let resourceType: String
+    let url: String
+    let status: String
+    let expansion: Expansion
+}
+
+struct Expansion: Hashable, Codable{
+    let timestamp: String
+    let total: Int
+    let contains:[Contains]
+}
+
+struct Contains: Hashable, Codable{
+    let code: String?
+    let system: String?
+    let display: String?
 }
